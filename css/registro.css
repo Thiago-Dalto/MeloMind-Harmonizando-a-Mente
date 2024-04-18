@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(236,250,235);
+    background: linear-gradient(90deg, rgba(236,250,235,1) 50%, rgba(123,201,143,1) 78%);
+}
+
+.container {
+    position: absolute;
+    max-width: 400px;
+    margin: 50px 100px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px 10px rgba(45, 215, 11, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #8ce4b0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a0da9b;
+    border-radius: 5px;
+}
+
+button {
+    width: 105%;
+    padding: 10px;
+    background-color: #4caf50; /* Verde */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+button:hover {
+    background-color: #45a049; /* Verde mais escuro */
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    border: #4caf50;
+}
+
+
+header img {
+    width: 150px;
+    margin: 15px ;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(3, 250, 40, 0.1); /* sombra nas bordas */
+    
+}
+
+span{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #50ef92;
+    
+}
+
+/* Adicione essas regras de estilo para a imagem relacionada ao login */
+.login-image {
+    width: 600px;
+    margin: 100px;
+    float: right; /* Alinha a imagem à direita */
+    margin-top: 80px; /* Adiciona um espaço entre a imagem e o formulário */
+    border-radius: 100px; /* Adiciona cantos arredondados à imagem */
+    box-shadow: 0 0 10px rgba(3, 32, 250, 0.1); /* sombra nas bordas */
+}

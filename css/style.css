@@ -1,0 +1,55 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, rgba(236,250,235,1) 50%, rgba(123,201,143,1) 78%);
+}
+
+header {
+    text-align: left;
+    padding: 20px;
+}
+
+#siteLogo {
+    width: 150px;
+}
+
+#searchContainer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#searchInput {
+    font-size: 16px;
+    padding: 10px;
+    width: 300px;
+}
+
+#searchButton {
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#buttonsContainer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.emotionButton {
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+header img {
+    width: 150px;
+    margin: 15px ;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(3, 250, 40, 0.1); /* sombra nas bordas */
+    
+}
