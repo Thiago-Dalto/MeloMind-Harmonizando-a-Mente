@@ -43,7 +43,7 @@ input[type="password"] {
 button {
     width: 105%;
     padding: 10px;
-    background-color: #4caf50; /* Verde */
+    background-color: #4caf50; 
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -53,7 +53,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049; /* Verde mais escuro */
+    background-color: #45a049; 
 }
 
 .error {
@@ -67,8 +67,7 @@ button:hover {
 header img {
     width: 150px;
     margin: 15px ;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(3, 250, 40, 0.1); /* sombra nas bordas */
+    display: block;
     
 }
 
@@ -78,12 +77,12 @@ span{
     
 }
 
-/* Adicione essas regras de estilo para a imagem relacionada ao login */
+
 .login-image {
     width: 600px;
     margin: 100px;
-    float: right; /* Alinha a imagem à direita */
-    margin-top: 80px; /* Adiciona um espaço entre a imagem e o formulário */
-    border-radius: 100px; /* Adiciona cantos arredondados à imagem */
-    box-shadow: 0 0 10px rgba(3, 32, 250, 0.1); /* sombra nas bordas */
+    float: right; 
+    margin-top: 80px; 
+    border-radius: 100px; 
+    box-shadow: 0 0 10px rgba(3, 32, 250, 0.1);
 }

@@ -1,29 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('login-form'); // Acessa o formulário pelo ID
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede que o formulário seja enviado automaticamente
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var errorMessage = document.getElementById('error-message');
 
-        // Captura os valores dos inputs
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        const age = document.getElementById('age').value;
-        const username = document.getElementById('username').value;
-        const favoriteMusic = document.getElementById('FavoriteMusic').value;
-
-        // Cria um objeto com os dados do usuário
-        const userData = {
-            email,
-            password,
-            age,
-            username,
-            favoriteMusic
-        };
-
-        // Salva o objeto no Local Storage
-        localStorage.setItem('userData', JSON.stringify(userData)); // Converte o objeto para string JSON
-
-        // Feedback opcional para o usuário após registro
-        alert('Registro concluído com sucesso!');
-    });
+    if (email === 'tmonteirodalto@gmail.com' && password === 'thiago123') {
+        
+        window.location.href = 'index.html';
+    } 
+    else {
+        
+        errorMessage.textContent = 'Credenciais inválidas. Por favor, tente novamente.';
+    }
 });

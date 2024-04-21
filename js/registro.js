@@ -1,28 +1,44 @@
-document.getElementById('register-form').addEventListener('submit', function(event) {
+// Verifica se existe uma mensagem de feedback armazenada e a exibe
+if (localStorage.getItem('registrar-form')) {
+    const feedbackMessage = document.getElementById('registrar-form');
+    feedbackMessage.textContent = localStorage.getItem('registrar-form');
+  
+    // Remove a mensagem de feedback do localStorage após 5 segundos
+    setTimeout(() => {
+      localStorage.removeItem('registrar-form');
+      feedbackMessage.textContent = '';
+    }, 5000);
+  }
+  
+  // Pega o formulário pelo seu ID
+  const feedbackForm = document.getElementById('registrar-form');
+  
+  // Adiciona um ouvinte de evento para capturar o envio do formulário
+  feedbackForm.addEventListener('submit', (event) => {
+    // Previne o comportamento padrão do formulário
     event.preventDefault();
-
-    // Coletando os valores dos inputs
-    var email = document.getElementById('register-email').value;
-    var password = document.getElementById('register-password').value;
-    var username = document.getElementById('username').value;
-    var age = document.getElementById('age').value;
-    var favoriteMusicStyle = document.getElementById('favorite-music-style').value;
-
-    // Criando um objeto com os dados do usuário
-    var userData = {
-        email: email,
-        password: password,
-        username: username,
-        age: age,
-        favoriteMusicStyle: favoriteMusicStyle
+  
+    // Captura os valores inseridos no formulário
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const mensagem = document.getElementById('mensagem').value;
+  
+    // Cria um objeto de feedback
+    const feedback = {
+      nome,
+      email,
+      mensagem,
+      data: new Date()
     };
-
-    // Armazenando os dados no localStorage
-    localStorage.setItem('userData', JSON.stringify(userData));
-
-    // Exibindo mensagem de sucesso
-    alert('Registro completado com sucesso!');
-
-    // Redirecionando para a página principal
-    window.location.href = 'pagina_principal.html'; // Substitua 'pagina_principal.html' pelo caminho correto da sua página inicial
-});
+  
+    // Armazena ou atualiza a lista de feedbacks no localStorage
+    const feedbacks = JSON.parse(localStorage.getItem('feedbacks')) || [];
+    feedbacks.push(feedback);
+    localStorage.setItem('feedbacks', JSON.stringify(feedbacks));
+  
+    // Exibe uma mensagem de agradecimento e limpa o formulário
+    const feedbackMessage = document.getElementById('registrar-form');
+    feedbackMessage.textContent = 'Obrigado pelo seu registro!';
+    feedbackForm.reset();
+  });
+  

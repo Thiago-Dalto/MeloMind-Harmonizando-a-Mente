@@ -1,12 +1,19 @@
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(90deg, rgba(236,250,235,1) 50%, rgba(123,201,143,1) 78%);
+    background: linear-gradient(90deg, rgba(236,250,235,1) 50%, rgb(10, 182, 53) 78%);
+    background-image: url(../img/fundo.webp); 
+    background-size: cover; 
+    background-position: right; 
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0; 
 }
 
 header {
     text-align: left;
     padding: 20px;
+
 }
 
 #siteLogo {
@@ -19,37 +26,48 @@ header {
 }
 
 #searchInput {
-    font-size: 16px;
-    padding: 10px;
-    width: 300px;
-}
-
-#searchButton {
-    font-size: 16px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 50%;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 8px;
+    width: 40%;
+    border: 3px solid #89a6da;
+    border-radius: 5px;
+    
 }
 
 #buttonsContainer {
     text-align: center;
     margin-top: 50px;
+    
 }
 
 .emotionButton {
-    border: none;
-    color: white;
-    font-size: 16px;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 50%;
-    cursor: pointer;
+    border: none; 
+    padding: 0;
+    background: none; 
 }
 
+.emotionButton img {
+    display: block; 
+    width: 100px; 
+    height: auto; 
+}
 header img {
     width: 150px;
     margin: 15px ;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(3, 250, 40, 0.1); /* sombra nas bordas */
+    display: block;
+    
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a0da9b;
+    border-radius: 5px;
+}
+#information{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:20px;
     
 }

@@ -3,24 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
     <title>Bem-Estar com Música</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <img src="img/logo.webp" alt="MeloMind Logo">
+        <img src="img/logo.png" alt="MeloMind Logo">
+        <div id="searchContainer">
+            <input type="text" id="searchInput" placeholder="Pesquisar músicas...">
+            
+            <box-icon name='search-alt-2' color='#96e19a'></box-icon>
+        </div>
     </header>
-    <div id="searchContainer">
-        <input type="text" id="searchInput" placeholder="Pesquisar músicas...">
-        <button id="searchButton">🔍</button> 
-        <box-icon name='search-alt-2' color='#96e19a' ></box-icon>
-    </div>
+   
     <div id="buttonsContainer">
-        <button class="emotionButton" style="background-color: yellow;" onclick="location.href='feliz.html'">Feliz</button>
-        <button class="emotionButton" style="background-color: blue;" onclick="location.href='triste.html'">Triste</button>
-        <button class="emotionButton" style="background-color: lightgreen;" onclick="location.href='entediado.html'">Entediado</button>
-        <button class="emotionButton" style="background-color: red;" onclick="location.href='estressado.html'">Estressado</button>
+        <button class="emotionButton" onclick="location.href='rep-music.html'">
+            <img src="img/feliz.png" alt="Emoji Feliz" width="100" height="50">
+        </button>
+        <button class="emotionButton"  onclick="location.href='rep-music.html'">
+            <img src="img/triste.png" alt="Emoji Triste" width="200" height="100">
+        </button>
+        <button class="emotionButton"  onclick="location.href='rep-music.html'">
+            <img src="img/entediado.png" alt="Emoji Entediado" width="200" height="100">
+        </button>
+        <button class="emotionButton"  onclick="location.href='rep-music.html'">
+            <img src="img/bravo.png" alt="Emoji Estressado" width="200" height="100">
+        </button>
     </div>
+        
+        <div id = "information">
+            <p>clique no botão que representa o seu estado emocional que preparamos uma playlist especialmente para você!</p>
+            <p>melhorando o seu bem estar no dia a dia!</p>
+        </div>
     <script src="js/script.js"></script>
 </body>
 </html>
+
+
