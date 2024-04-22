@@ -1,44 +1,43 @@
 // script.js
 let currentTrack = 0;
-let tracks = [];
+let tracks = {};
 
 function loadMusic() {
-    fetch('teste.json')
+    fetch('msc.json')
         .then(response => response.json())
         .then(data => {
             tracks = data;
-            playTrack();
+            playTrack(currentTrack);
         });
 }
 
-function playTrack() {
-    if (tracks.length > 0) {
-        const player = document.getElementById('audioPlayer');
-        const trackTitle = document.getElementById('trackTitle');
-        player.src = tracks[currentTrack].file;
-        trackTitle.textContent = `Tocando: ${tracks[currentTrack].title}`;
-        player.play();
-    }
+function playTrack(index) {
+    const track = tracks[index].musica;
+    const player = document.getElementById('audioPlayer');
+    const albumCover = document.getElementById('albumCover');
+    const trackTitle = document.getElementById('trackTitle');
+    const trackArtist = document.getElementById('trackArtist');
+    const albumTitle = document.getElementById('albumTitle');
+
+    player.src = track.mp3;
+    albumCover.src = track.album.imagem;
+    trackTitle.textContent = track.nome;
+    trackArtist.textContent = track.artista;
+    albumTitle.textContent = track.album.titulo;
+
+    player.play();
 }
 
 function nextTrack() {
-    if (currentTrack < tracks.length - 1) {
-        currentTrack++;
-        playTrack();
-    } else {
-        currentTrack = 0;  // Voltar ao início da lista
-        playTrack();
+    currentTrack++;
+    if (currentTrack >= Object.keys(tracks).length) {
+        currentTrack = 0; // Loop back to first track
     }
+    playTrack(currentTrack);
 }
 
 function previousTrack() {
-    if (currentTrack > 0) {
-        currentTrack--;
-        playTrack();
-    } else {
-        currentTrack = tracks.length - 1;  // Ir para a última faixa
-        playTrack();
-    }
-}
-
-window.onload = loadMusic;
+    currentTrack--;
+    if (currentTrack < 0) {
+        currentTrack = Object.keys(tracks).length - 1; // Loop to last track
+    }}

@@ -292,3 +292,22 @@ body{
 #feedbackForm button:hover {
     background-color: #14833b;
 }
+
+.music-player {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#trackInfo {
+    margin-bottom: 10px;
+}
+
+.logo{
+    position: relative;
+    left: 450px;
+    bottom: 300px;
+}
